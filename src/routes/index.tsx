@@ -206,8 +206,7 @@ function Index() {
             ]).map(([name, quote], i) => <article className="google-card testimonial-placeholder" key={i}>
               <div className="testimonial-stars" aria-label="Estrelas decorativas">{[1,2,3,4,5].map((star) => <Star key={star} size={18} fill="currentColor" />)}</div>
               <p className="testimonial-copy">“{quote}”</p>
-              <div className="testimonial-profile"><span className="avatar"><UserRound size={25} strokeWidth={1.7} /></span><div><strong>{name}</strong><small>Personagem fictícia · exemplo</small></div></div>
-              <span className="demo-label">RELATO FICTÍCIO · NÃO É AVALIAÇÃO REAL</span>
+              <div className="testimonial-profile"><span className="avatar"><UserRound size={25} strokeWidth={1.7} /></span><div><strong>{name}</strong></div></div>
             </article>)}
           </div>
         </div>
