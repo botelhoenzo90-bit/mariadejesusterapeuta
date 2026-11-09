@@ -284,3 +284,65 @@ footer{grid-template-columns:1.4fr 1fr 1fr;gap:36px}
   }
   .hero-clean .hero-content h1 em{display:inline}
 }
+
+
+/* Mais destaque para os itens de confiança e cards de depoimento compactos */
+.hero-clean .trust-row{
+  gap:30px;
+  font-size:16px;
+  font-weight:600;
+}
+.hero-clean .trust-row span{gap:9px}
+.hero-clean .trust-row svg{width:18px;height:18px;flex:none}
+
+.google-card.testimonial-placeholder{
+  width:310px;
+  min-width:310px;
+  height:250px;
+  min-height:250px;
+  padding:20px 22px 18px;
+  border-radius:22px;
+}
+.google-card.testimonial-placeholder .testimonial-stars{
+  margin:0 auto 13px;
+  gap:4px;
+}
+.google-card.testimonial-placeholder .testimonial-copy{
+  flex:none;
+  max-width:100%;
+  font-size:15px;
+  line-height:1.5;
+  margin:0 auto 14px;
+}
+.google-card.testimonial-placeholder .testimonial-profile{
+  flex:none;
+  margin-top:auto;
+  gap:10px;
+}
+.google-card.testimonial-placeholder .testimonial-profile .avatar{
+  width:42px;
+  min-width:42px;
+  height:42px;
+}
+.google-card.testimonial-placeholder .testimonial-profile strong{font-size:14px}
+.google-card.testimonial-placeholder .testimonial-profile small{font-size:10px}
+
+@media(max-width:620px){
+  .hero-clean .trust-row{
+    gap:12px 20px;
+    font-size:14px;
+  }
+  .hero-clean .trust-row svg{width:17px;height:17px}
+  .google-card.testimonial-placeholder{
+    width:min(80vw,285px);
+    min-width:min(80vw,285px);
+    height:245px;
+    min-height:245px;
+    padding:18px 18px 16px;
+  }
+  .google-card.testimonial-placeholder .testimonial-copy{
+    font-size:14px;
+    line-height:1.48;
+    margin-bottom:12px;
+  }
+}
