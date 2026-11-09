@@ -154,8 +154,8 @@ footer{grid-template-columns:1.4fr 1fr 1fr;gap:36px}
 .location-icon{display:flex;justify-content:center;align-items:center;margin:0 auto 8px}
 .reviews .section-heading{max-width:850px}
 .reviews-marquee{padding:16px 0 28px}
-.reviews-track{align-items:stretch;animation:reviewsLoop 42s linear infinite;will-change:transform}
-.reviews-marquee:hover .reviews-track,.reviews-marquee:focus-within .reviews-track{animation-play-state:paused}
+.reviews-track{align-items:stretch;animation:reviewsLoop 24s linear infinite;will-change:transform}
+.reviews-marquee:hover .reviews-track,.reviews-marquee:focus-within .reviews-track{animation-play-state:running}
 .google-card.testimonial-placeholder{width:350px;min-height:330px;height:auto;padding:27px 26px 22px;border-radius:26px;background:#fffaf3;border:1px solid #ddc8b1;box-shadow:0 14px 35px rgba(75,48,30,.09);align-items:center;text-align:center;justify-content:flex-start;gap:0;white-space:normal}
 .testimonial-stars{display:flex;align-items:center;justify-content:center;gap:5px;color:#b88951;margin:0 auto 22px}
 .testimonial-copy{font-family:Georgia,serif;font-size:17px;line-height:1.7;color:#624b39;margin:0 auto 24px;max-width:285px;flex:1}
@@ -211,3 +211,8 @@ footer{grid-template-columns:1.4fr 1fr 1fr;gap:36px}
  .btn{font-size:15px;min-height:54px;padding:15px 22px;gap:9px;white-space:nowrap;width:auto;max-width:calc(100vw - 36px)}
  .testimonial-profile{justify-content:center}
 }
+
+
+/* Testimonial cards: faster continuous movement, including on hover */
+.reviews-track{animation-duration:24s}
+.reviews-marquee:hover .reviews-track,.reviews-marquee:focus-within .reviews-track{animation-play-state:running}
