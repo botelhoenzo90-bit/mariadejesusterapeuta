@@ -1,6 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { ArrowRight, ArrowUpRight, Check, ChevronDown, Heart, Sparkles, Star, MapPin, Video, BookOpen, HandHeart, MessageCircle } from "lucide-react";
+import anaFeitosaAsset from "@/assets/ana-feitosa.png.asset.json";
+import atendimentoOnlineAsset from "@/assets/atendimento-online.png.asset.json";
+import anaNaturopataAsset from "@/assets/ana-naturopata.png.asset.json";
+import whatsappAsset from "@/assets/whatsapp.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -140,14 +144,14 @@ function Index() {
       </section>
 
       <section id="sobre" className="about section">
-        <div className="about-image-wrap about-image-desktop" style={{ display: "grid", placeItems: "center", background: "#eadbc8", color: "var(--brown-dark)", padding: 28 }}>
-          <div style={{ textAlign: "center" }}><HandHeart size={74} strokeWidth={1.2} /><p style={{ fontFamily: "Georgia,serif", fontSize: 27, marginTop: 18 }}>Acolher também é cuidar.</p></div>
+        <div className="about-image-wrap about-image-desktop">
+          <img src={anaFeitosaAsset.url} alt="Imagem de apresentação da terapeuta" />
         </div>
         <div className="section-copy">
           <div className="kicker">Conheça seu atendimento</div>
           <h2>Uma escuta com respeito à sua história e à sua <em>individualidade.</em></h2>
-          <div className="about-image-wrap about-image-mobile" style={{ placeItems: "center", background: "#eadbc8", color: "var(--brown-dark)", padding: 24 }}>
-            <div style={{ textAlign: "center" }}><HandHeart size={58} strokeWidth={1.2} /><p style={{ fontFamily: "Georgia,serif", fontSize: 23 }}>Acolher também é cuidar.</p></div>
+          <div className="about-image-wrap about-image-mobile">
+            <img src={anaFeitosaAsset.url} alt="Imagem de apresentação da terapeuta" />
           </div>
           <p>Maria de Jesus Costa oferece atendimento terapêutico com abordagem ministerial, fundamentado em escuta, acolhimento e respeito às vivências de cada pessoa.</p>
           <p>A formação apresentada contempla conteúdos como aconselhamento cristão, psicologia pastoral, terapia do luto, ansiedade, estresse, depressão, sono, traumas, fobias e relações familiares.</p>
@@ -158,8 +162,8 @@ function Index() {
 
       <section id="abordagem" className="naturopathy section" aria-labelledby="approach-title">
         <div className="naturopathy-inner">
-          <div className="naturopathy-image" style={{ display: "grid", placeItems: "center", background: "#eadbc8", color: "var(--brown-dark)", minHeight: 300 }}>
-            <div style={{ textAlign: "center", padding: 24 }}><BookOpen size={64} strokeWidth={1.2} /><h3 style={{ fontFamily: "Georgia,serif", fontSize: 28 }}>Formação e abordagem</h3><p>Escuta · reflexão · acolhimento</p></div>
+          <div className="naturopathy-image">
+            <img src={anaNaturopataAsset.url} alt="Imagem ilustrativa da terapeuta em seu ambiente de atendimento" />
           </div>
           <div className="naturopathy-copy section-copy">
             <div className="kicker">Abordagem ministerial</div>
@@ -210,12 +214,16 @@ function Index() {
         <div className="online-copy section-copy">
           <div className="kicker">Atendimento online</div>
           <h2>Um espaço de conversa onde <em>você estiver.</em></h2>
-          <div className="online-image-wrap online-image-mobile" style={{ placeItems: "center", background: "#eadbc8", color: "var(--brown-dark)" }}><Video size={76} strokeWidth={1.2} /></div>
+          <div className="online-image-wrap online-image-mobile">
+            <img src={atendimentoOnlineAsset.url} alt="Atendimento realizado por videochamada" />
+          </div>
           <p>O atendimento online oferece praticidade para quem prefere conversar de casa ou de outro local reservado. Consulte pelo WhatsApp os horários e as orientações para a sessão.</p>
           <div className="online-points"><span><Check /> Praticidade</span><span><Check /> Horário combinado</span><span><Check /> Ambiente reservado</span></div>
           <BookingButton>Consultar horários online</BookingButton>
         </div>
-        <div className="online-image-wrap online-image-desktop" style={{ display: "grid", placeItems: "center", background: "#eadbc8", color: "var(--brown-dark)" }}><div style={{ textAlign: "center" }}><Video size={84} strokeWidth={1.2} /><p style={{ fontFamily: "Georgia,serif", fontSize: 24 }}>Atendimento online</p></div></div>
+        <div className="online-image-wrap online-image-desktop">
+          <img src={atendimentoOnlineAsset.url} alt="Atendimento realizado por videochamada" />
+        </div>
       </section>
 
       <section id="localizacao" className="section" style={{ background: "#fbf3e8" }}>
@@ -261,7 +269,7 @@ function Index() {
         <div className="footer-contact"><strong>Agendamentos</strong><a href={whatsapp} target="_blank" rel="noreferrer">{phoneLabel}</a><a className="footer-cta" href={whatsapp} target="_blank" rel="noreferrer">Fale pelo WhatsApp <ArrowUpRight size={15} /></a><p>Quadra 574, Lote 5A<br />Novo Gama – GO · CEP 72860-537</p></div>
         <div className="footer-bottom">© {new Date().getFullYear()} Maria de Jesus Costa · Atendimento terapêutico</div>
       </footer>
-      <a className="floating-whatsapp" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Conversar com Maria pelo WhatsApp"><span style={{ display: "grid", placeItems: "center", width: 58, height: 58, borderRadius: "50%", background: "#25D366", color: "#fff" }}><MessageCircle size={29} /></span></a>
+      <a className="floating-whatsapp" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Conversar com Maria pelo WhatsApp"><img src={whatsappAsset.url} alt="" /></a>
     </main>
   );
 }
