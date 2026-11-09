@@ -346,3 +346,25 @@ footer{grid-template-columns:1.4fr 1fr 1fr;gap:36px}
     margin-bottom:12px;
   }
 }
+
+
+/* Loop contínuo dos depoimentos: duas sequências idênticas sem intervalo no reinício */
+.reviews-track{
+  gap:0!important;
+  animation:reviewsLoopSeamless 24s linear infinite!important;
+  width:max-content;
+}
+.reviews-track>.testimonial-placeholder{
+  flex:0 0 310px;
+  margin-right:20px;
+}
+@keyframes reviewsLoopSeamless{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+@media(max-width:620px){
+  .reviews-track>.testimonial-placeholder{
+    flex-basis:min(80vw,285px);
+    margin-right:16px;
+  }
+}
