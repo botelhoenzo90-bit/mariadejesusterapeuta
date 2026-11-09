@@ -4,7 +4,6 @@ import { ArrowRight, ArrowUpRight, Check, ChevronDown, Heart, Sparkles, Star, Ma
 import anaFeitosaAsset from "@/assets/maria-de-jesus.jpg.asset.json";
 import logoAsset from "@/assets/logo-maria-de-jesus.png.asset.json";
 import atendimentoOnlineAsset from "@/assets/atendimento-online.png.asset.json";
-import anaNaturopataAsset from "@/assets/ana-naturopata.png.asset.json";
 const areaImgs = import.meta.glob("@/assets/area-acolhimento-*.jpg.asset.json", { eager: true, import: "default" }) as Record<string, { url: string }>;
 const areaUrl = (n: number) => Object.entries(areaImgs).find(([k]) => k.endsWith(`-${n}.jpg.asset.json`))?.[1].url;
 import whatsappAsset from "@/assets/whatsapp.png.asset.json";
