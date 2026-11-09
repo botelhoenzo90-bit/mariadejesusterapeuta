@@ -127,3 +127,59 @@ footer{grid-template-columns:1.4fr 1fr 1fr;gap:36px}
   .footer-bottom{grid-column:1}
   .floating-whatsapp{right:16px;bottom:16px;width:58px;height:58px}
 }
+
+
+/* Requested alignment and testimonial carousel finish */
+.hero-clean .hero-content{margin-left:auto;margin-right:auto;text-align:center;align-items:center}
+.hero-clean .hero-logo{display:none}
+.hero-clean .eyebrow{justify-content:center}
+.hero-clean .hero-content>p{margin-left:auto;margin-right:auto;max-width:700px}
+.hero-clean .trust-row{justify-content:center}
+.welcome .section-heading,.pain-solution .section-heading{text-align:center;margin-left:auto;margin-right:auto}
+.welcome-grid{justify-items:stretch;align-items:stretch}
+.welcome .soft-pill{align-items:center;justify-content:center;text-align:center}
+.pain-solution-shell>.section-heading{margin-left:auto;margin-right:auto}
+.pain-simple-card{text-align:center}
+.pain-simple-title{text-align:center}
+.pain-simple-card ul{max-width:600px;margin:0 auto}
+.pain-simple-card li{padding:12px 0;text-align:center}
+.pain-simple-card li::before{display:none}
+.pain-solution-cta{text-align:center}
+.about .clean-checks{margin:26px auto;justify-items:center;grid-template-columns:repeat(2,minmax(0,1fr));max-width:620px}
+.about .clean-checks span{width:100%;justify-content:center;text-align:center}
+.naturopathy-copy{text-align:center}
+.naturopathy-copy>p{margin-left:auto;margin-right:auto}
+.naturopathy-how{border-left:0;border-top:2px solid var(--leaf);padding:20px 0 0;margin:24px auto;max-width:650px}
+.naturopathy-note{margin-left:auto!important;margin-right:auto!important}
+.location-icon{display:flex;justify-content:center;align-items:center;margin:0 auto 8px}
+.reviews .section-heading{max-width:850px}
+.reviews-marquee{padding:16px 0 28px}
+.reviews-track{align-items:stretch;animation:reviewsLoop 42s linear infinite;will-change:transform}
+.reviews-marquee:hover .reviews-track,.reviews-marquee:focus-within .reviews-track{animation-play-state:paused}
+.google-card.testimonial-placeholder{width:350px;min-height:330px;height:auto;padding:27px 26px 22px;border-radius:26px;background:#fffaf3;border:1px solid #ddc8b1;box-shadow:0 14px 35px rgba(75,48,30,.09);align-items:center;text-align:center;justify-content:flex-start;gap:0;white-space:normal}
+.testimonial-stars{display:flex;align-items:center;justify-content:center;gap:5px;color:#b88951;margin:0 auto 22px}
+.testimonial-copy{font-family:Georgia,serif;font-size:17px;line-height:1.7;color:#624b39;margin:0 auto 24px;max-width:285px;flex:1}
+.testimonial-profile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;margin-top:auto}
+.testimonial-profile .avatar{width:54px;height:54px;display:grid;place-items:center;border-radius:50%;background:#eadbc8;color:#70401f}
+.testimonial-profile strong,.testimonial-profile small{display:block;text-align:center}
+.testimonial-profile strong{font-size:14px;color:#3f2b20}
+.testimonial-profile small{font-size:11px;color:#8b7766;margin-top:4px}
+.demo-label{display:block;margin-top:16px;font-size:9px;line-height:1.4;letter-spacing:.11em;font-weight:800;color:#987b60;text-align:center}
+@media(prefers-reduced-motion:reduce){.reviews-track{animation:none;transform:none}.reviews-marquee{overflow-x:auto}.strip-track,.services-track{animation:none}}
+@media(max-width:900px){
+ .about .clean-checks{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .naturopathy-copy{text-align:center}
+}
+@media(max-width:620px){
+ .hero-clean .hero-content{align-items:center;text-align:center}
+ .hero-clean .trust-row{justify-content:center}
+ .welcome .soft-pill{flex-direction:column;justify-content:center;text-align:center}
+ .pain-simple-card{text-align:center}
+ .pain-simple-card li{text-align:center}
+ .about .clean-checks{grid-template-columns:1fr;max-width:360px}
+ .about .clean-checks span{justify-content:center}
+ .naturopathy-how{padding-top:17px}
+ .google-card.testimonial-placeholder{width:min(82vw,330px);min-height:320px;padding:24px 21px}
+ .testimonial-copy{font-size:16px}
+ .reviews-track{gap:16px}
+}
