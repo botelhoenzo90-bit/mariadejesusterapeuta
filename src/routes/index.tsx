@@ -51,7 +51,6 @@ const faqs = [
   ["Onde fica o atendimento presencial?", "O endereço informado é Quadra 574, Lote 5A, Novo Gama – Goiás, CEP 72860-537. Também é possível consultar a disponibilidade para pessoas de Brasília e região."],
   ["Qual é o valor da sessão?", "O material de divulgação informa valor social de R$ 90,00. Confirme pelo WhatsApp as condições e a disponibilidade atuais."],
   ["Quais assuntos posso levar para o atendimento?", "Você pode conversar sobre ansiedade, estresse, tristeza, luto, sono, autoestima, traumas, fobias, relacionamentos e questões familiares, entre outros desafios emocionais."],
-  ["O atendimento substitui acompanhamento médico ou psicológico?", "Não. O atendimento terapêutico na abordagem ministerial não substitui avaliação, diagnóstico ou tratamento realizado por profissionais de saúde habilitados. Quando necessário, procure também os serviços de saúde adequados."],
 ];
 
 function BookingButton({ children = "Fale pelo WhatsApp" }: { children?: ReactNode }) {
@@ -171,7 +170,6 @@ function Index() {
               <h3>Temas da formação</h3>
               <p>Aconselhamento cristão, psicologia pastoral, luto, sono, ansiedade, estresse, depressão, dependência química, traumas, fobias e acompanhamento de famílias, crianças, adolescentes, adultos e idosos.</p>
             </div>
-            <p className="naturopathy-note">A abordagem ministerial não equivale a uma graduação em Psicologia nem substitui atendimento médico ou psicológico.</p>
             <BookingButton>Saiba mais pelo WhatsApp</BookingButton>
           </div>
         </div>
@@ -197,15 +195,11 @@ function Index() {
         </div>
         <div className="reviews-marquee" aria-label="Carrossel de exemplos fictícios de relatos">
           <div className="reviews-track">
-            {[
+            {Array.from({ length: 6 }, () => [
               ["Ana Paula", "Gostei da proposta de um atendimento com escuta atenta e respeito às minhas vivências. Um espaço para conversar com tranquilidade."],
               ["Carla Mendes", "A abordagem acolhedora e o respeito às minhas crenças são pontos importantes para me sentir à vontade durante uma conversa."],
               ["João Ribeiro", "Ter um momento para organizar os pensamentos, falar sobre desafios e refletir com calma faz diferença na minha rotina."]
-            ].concat([
-              ["Ana Paula", "Gostei da proposta de um atendimento com escuta atenta e respeito às minhas vivências. Um espaço para conversar com tranquilidade."],
-              ["Carla Mendes", "A abordagem acolhedora e o respeito às minhas crenças são pontos importantes para me sentir à vontade durante uma conversa."],
-              ["João Ribeiro", "Ter um momento para organizar os pensamentos, falar sobre desafios e refletir com calma faz diferença na minha rotina."]
-            ]).map(([name, quote], i) => <article className="google-card testimonial-placeholder" key={i}>
+            ]).flat().map(([name, quote], i) => <article className="google-card testimonial-placeholder" key={i}>
               <div className="testimonial-stars" aria-label="Estrelas decorativas">{[1,2,3,4,5].map((star) => <Star key={star} size={18} fill="currentColor" />)}</div>
               <p className="testimonial-copy">“{quote}”</p>
               <div className="testimonial-profile"><span className="avatar"><UserRound size={25} strokeWidth={1.7} /></span><div><strong>{name}</strong></div></div>
