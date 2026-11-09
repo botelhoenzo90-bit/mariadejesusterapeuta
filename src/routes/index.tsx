@@ -61,15 +61,11 @@ function Index() {
     <main className="site">
       <section id="inicio" className="hero-clean">
         <div className="hero-content">
-          <div className="hero-logo" style={{ color: "var(--brown-dark)", fontFamily: "Georgia,serif", lineHeight: 1.05 }}>
-            <span style={{ display: "block", fontSize: "clamp(36px,6vw,58px)", letterSpacing: ".02em" }}>Maria de Jesus Costa</span>
-            <span style={{ display: "block", fontSize: 13, letterSpacing: ".22em", marginTop: 10, color: "var(--brown)" }}>TERAPEUTA · ABORDAGEM MINISTERIAL</span>
-          </div>
           <div className="eyebrow"><span /> ACOLHIMENTO · ESCUTA · CUIDADO</div>
-          <h1>Você merece um espaço de <em>acolhimento.</em></h1>
-          <p>Um lugar para conversar sobre o que pesa, compreender seus sentimentos e encontrar apoio para atravessar os desafios da vida com mais serenidade.</p>
+          <h1>Um espaço para acolher sua história e cuidar do que <em>você sente.</em></h1>
+          <p>Nem sempre é fácil colocar em palavras aquilo que machuca ou preocupa. Aqui, você encontra uma escuta atenta e respeitosa para compartilhar suas vivências, fortalecer o autoconhecimento e buscar novos caminhos com mais leveza.</p>
           <BookingButton>Agende uma conversa</BookingButton>
-          <div className="trust-row"><span><Check /> Escuta acolhedora</span><span><Check /> Atendimento online</span><span><Check /> Valor social informado: R$ 90</span></div>
+          <div className="trust-row"><span><Check /> Escuta acolhedora</span><span><Check /> Atendimento online e presencial</span></div>
         </div>
       </section>
 
@@ -233,22 +229,27 @@ function Index() {
           <p>Consulte a disponibilidade de atendimento presencial e online pelo WhatsApp.</p>
         </div>
         <div style={{ maxWidth: 760, margin: "0 auto", padding: "30px", borderRadius: 24, background: "#fffaf3", border: "1px solid #dfd0be", textAlign: "center" }}>
-          <MapPin size={34} color="#70401f" />
+          <div className="location-icon"><MapPin size={34} color="#70401f" /></div>
           <h3 style={{ fontFamily: "Georgia,serif", fontSize: 26, color: "#3f2417", margin: "12px 0" }}>Novo Gama – Goiás</h3>
           <p style={{ color: "#7b6a5c", lineHeight: 1.8, margin: 0 }}>Quadra 574, Lote 5A<br />CEP 72860-537<br />Atendimento também para Brasília – Distrito Federal, mediante consulta.</p>
           <BookingButton>Consultar localização e horários</BookingButton>
         </div>
       </section>
 
-      <section className="reviews section">
+      <section className="reviews section" aria-labelledby="reviews-title">
         <div className="section-heading center">
-          <div className="kicker">Acolhimento e confiança</div>
-          <h2>O primeiro passo pode ser <em>uma conversa.</em></h2>
-          <p>Entre em contato para conhecer a proposta de atendimento, tirar dúvidas e entender se ela corresponde ao que você procura.</p>
+          <div className="kicker">Depoimentos</div>
+          <h2 id="reviews-title">Um espaço reservado para <em>histórias reais.</em></h2>
+          <p>Os relatos serão publicados com autorização de cada pessoa. Em breve, esta área poderá reunir experiências de quem desejar compartilhar sua jornada.</p>
         </div>
-        <div className="reviews-marquee">
+        <div className="reviews-marquee" aria-label="Modelos de cards para futuros depoimentos">
           <div className="reviews-track">
-            {[["Escuta respeitosa", "Um espaço para falar com tranquilidade, sem julgamentos e com respeito à sua história."], ["Acolhimento", "Atendimento atento às necessidades e ao momento de cada pessoa."], ["Cuidado individual", "Uma conversa que considera suas vivências, crenças e particularidades."]].concat([["Escuta respeitosa", "Um espaço para falar com tranquilidade, sem julgamentos e com respeito à sua história."], ["Acolhimento", "Atendimento atento às necessidades e ao momento de cada pessoa."], ["Cuidado individual", "Uma conversa que considera suas vivências, crenças e particularidades."]]).map(([name, text], i) => <article className="google-card" key={i}><div className="google-top"><span className="avatar"><Heart size={19} /></span><div><strong>{name}</strong><small>Compromisso com o acolhimento</small></div></div><p>{text}</p></article>)}
+            {[1,2,3,1,2,3].map((item, i) => <article className="google-card testimonial-placeholder" key={i}>
+              <div className="testimonial-stars" aria-label="Estrelas ilustrativas de demonstração">{[1,2,3,4,5].map((star) => <Star key={star} size={17} />)}</div>
+              <p className="testimonial-copy">Espaço reservado para inserir o depoimento verdadeiro de uma pessoa atendida, mediante autorização.</p>
+              <div className="testimonial-profile"><span className="avatar"><Heart size={20} /></span><div><strong>Nome do cliente</strong><small>Depoimento demonstrativo</small></div></div>
+              <span className="demo-label">MODELO · SUBSTITUIR POR RELATO REAL</span>
+            </article>)}
           </div>
         </div>
         <BookingButton>Converse com Maria</BookingButton>
