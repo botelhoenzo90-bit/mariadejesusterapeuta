@@ -183,3 +183,17 @@ footer{grid-template-columns:1.4fr 1fr 1fr;gap:36px}
  .testimonial-copy{font-size:16px}
  .reviews-track{gap:16px}
 }
+
+
+/* Testimonial section moved higher in the page */
+.reviews{padding-top:clamp(42px,5vw,64px);padding-bottom:clamp(48px,5vw,70px);background:#f7eee3}
+.reviews .section-heading{margin-bottom:24px}
+.testimonial-stars{color:#e7b928!important}
+.testimonial-stars svg{fill:#e7b928;stroke:#e7b928}
+.google-card.testimonial-placeholder{background:#fffdf9;border-color:#e4d2bd}
+.testimonial-profile .avatar{background:#efe2d2;color:#70401f}
+.demo-label{color:#886b50}
+@media(max-width:620px){
+ .reviews{padding-top:38px;padding-bottom:44px}
+ .reviews .section-heading{margin-bottom:14px}
+}
