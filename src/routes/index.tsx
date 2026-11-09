@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
-import { ArrowRight, ArrowUpRight, Check, ChevronDown, Heart, Sparkles, Star, MapPin, Video, BookOpen, Users, HandHeart } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, ChevronDown, Heart, Sparkles, Star, MapPin, Video, BookOpen, HandHeart, MessageCircle } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -240,7 +240,7 @@ function Index() {
         </div>
         <div className="reviews-marquee">
           <div className="reviews-track">
-            {[["", "Escuta respeitosa", "Um espaço para falar com tranquilidade, sem julgamentos e com respeito à sua história."], ["", "Acolhimento", "Atendimento atento às necessidades e ao momento de cada pessoa."], ["", "Cuidado individual", "Uma conversa que considera suas vivências, crenças e particularidades."]].concat([["", "Escuta respeitosa", "Um espaço para falar com tranquilidade, sem julgamentos e com respeito à sua história."], ["", "Acolhimento", "Atendimento atento às necessidades e ao momento de cada pessoa."], ["", "Cuidado individual", "Uma conversa que considera suas vivências, crenças e particularidades."]]).map(([initial, name, text], i) => <article className="google-card" key={i}><div className="google-top"><span className="avatar"><Heart size={19} /></span><div><strong>{name}</strong><small>Compromisso com o acolhimento</small></div></div><div className="stars">{[1,2,3,4,5].map((x) => <Star key={x} fill="currentColor" size={17} />)}</div><p>{text}</p></article>)}
+            {[["Escuta respeitosa", "Um espaço para falar com tranquilidade, sem julgamentos e com respeito à sua história."], ["Acolhimento", "Atendimento atento às necessidades e ao momento de cada pessoa."], ["Cuidado individual", "Uma conversa que considera suas vivências, crenças e particularidades."]].concat([["Escuta respeitosa", "Um espaço para falar com tranquilidade, sem julgamentos e com respeito à sua história."], ["Acolhimento", "Atendimento atento às necessidades e ao momento de cada pessoa."], ["Cuidado individual", "Uma conversa que considera suas vivências, crenças e particularidades."]]).map(([name, text], i) => <article className="google-card" key={i}><div className="google-top"><span className="avatar"><Heart size={19} /></span><div><strong>{name}</strong><small>Compromisso com o acolhimento</small></div></div><p>{text}</p></article>)}
           </div>
         </div>
         <BookingButton>Converse com Maria</BookingButton>
@@ -261,7 +261,7 @@ function Index() {
         <div className="footer-contact"><strong>Agendamentos</strong><a href={whatsapp} target="_blank" rel="noreferrer">{phoneLabel}</a><a className="footer-cta" href={whatsapp} target="_blank" rel="noreferrer">Fale pelo WhatsApp <ArrowUpRight size={15} /></a><p>Quadra 574, Lote 5A<br />Novo Gama – GO · CEP 72860-537</p></div>
         <div className="footer-bottom">© {new Date().getFullYear()} Maria de Jesus Costa · Atendimento terapêutico</div>
       </footer>
-      <a className="floating-whatsapp" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Conversar com Maria pelo WhatsApp"><span style={{ display: "grid", placeItems: "center", width: 58, height: 58, borderRadius: "50%", background: "#25D366", color: "#fff", fontSize: 28 }}>◉</span></a>
+      <a className="floating-whatsapp" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Conversar com Maria pelo WhatsApp"><span style={{ display: "grid", placeItems: "center", width: 58, height: 58, borderRadius: "50%", background: "#25D366", color: "#fff" }}><MessageCircle size={29} /></span></a>
     </main>
   );
 }
