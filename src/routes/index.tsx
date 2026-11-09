@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { ArrowRight, ArrowUpRight, Check, ChevronDown, Heart, Sparkles, Star, MapPin, Video, BookOpen, HandHeart, MessageCircle, UserRound } from "lucide-react";
-import anaFeitosaAsset from "@/assets/ana-feitosa.png.asset.json";
+import anaFeitosaAsset from "@/assets/maria-de-jesus.jpg.asset.json";
+import logoAsset from "@/assets/logo-maria-de-jesus.png.asset.json";
 import atendimentoOnlineAsset from "@/assets/atendimento-online.png.asset.json";
 import anaNaturopataAsset from "@/assets/ana-naturopata.png.asset.json";
 const areaImgs = import.meta.glob("@/assets/area-acolhimento-*.jpg.asset.json", { eager: true, import: "default" }) as Record<string, { url: string }>;
@@ -17,6 +18,8 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Um espaço de escuta, acolhimento e cuidado emocional." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: "https://mariadejesusterapeuta.lovable.app/__l5e/assets-v1/cbff368e-3689-4432-9b51-dad329532caa/maria-compartilhamento.jpg" },
+      { name: "twitter:image", content: "https://mariadejesusterapeuta.lovable.app/__l5e/assets-v1/cbff368e-3689-4432-9b51-dad329532caa/maria-compartilhamento.jpg" },
     ],
   }),
   component: Index,
@@ -63,6 +66,7 @@ function Index() {
     <main className="site">
       <section id="inicio" className="hero-clean">
         <div className="hero-content">
+          <img className="site-logo" src={logoAsset.url} alt="Maria de Jesus Terapeuta" />
           <div className="eyebrow"><span /> ACOLHIMENTO · ESCUTA · CUIDADO</div>
           <h1>Um espaço para acolher sua história e cuidar do que <em>você sente.</em></h1>
           <p>Nem sempre é fácil colocar em palavras aquilo que machuca ou preocupa. Aqui, você encontra uma escuta atenta e respeitosa para compartilhar suas vivências, fortalecer o autoconhecimento e buscar novos caminhos com mais leveza.</p>
@@ -143,13 +147,13 @@ function Index() {
 
       <section id="sobre" className="about section">
         <div className="about-image-wrap about-image-desktop">
-          <img src={anaFeitosaAsset.url} alt="Imagem de apresentação da terapeuta" />
+          <img src={anaFeitosaAsset.url} alt="Maria de Jesus Costa, terapeuta" />
         </div>
         <div className="section-copy">
           <div className="kicker">Conheça seu atendimento</div>
           <h2>Uma escuta com respeito à sua história e à sua <em>individualidade.</em></h2>
           <div className="about-image-wrap about-image-mobile">
-            <img src={anaFeitosaAsset.url} alt="Imagem de apresentação da terapeuta" />
+            <img src={anaFeitosaAsset.url} alt="Maria de Jesus Costa, terapeuta" />
           </div>
           <p>Maria de Jesus Costa oferece atendimento terapêutico com abordagem ministerial, fundamentado em escuta, acolhimento e respeito às vivências de cada pessoa.</p>
           <p>A formação apresentada contempla conteúdos como aconselhamento cristão, psicologia pastoral, terapia do luto, ansiedade, estresse, depressão, sono, traumas, fobias e relações familiares.</p>
@@ -160,9 +164,6 @@ function Index() {
 
       <section id="abordagem" className="naturopathy section" aria-labelledby="approach-title">
         <div className="naturopathy-inner">
-          <div className="naturopathy-image">
-            <img src={anaNaturopataAsset.url} alt="Imagem ilustrativa da terapeuta em seu ambiente de atendimento" />
-          </div>
           <div className="naturopathy-copy section-copy">
             <div className="kicker">Abordagem ministerial</div>
             <h2 id="approach-title">Acolhimento que respeita sua fé, sua história e <em>seu momento.</em></h2>
@@ -276,7 +277,7 @@ function Index() {
       </section>
 
       <footer>
-        <div className="footer-brand"><a className="brand" href="#inicio"><strong>MARIA</strong> DE JESUS COSTA <small>TERAPEUTA · ABORDAGEM MINISTERIAL</small></a><p>Escuta, acolhimento e respeito à sua história.</p></div>
+        <div className="footer-brand"><a className="footer-logo" href="#inicio"><img src={logoAsset.url} alt="Maria de Jesus Terapeuta" /></a><p>Escuta, acolhimento e respeito à sua história.</p></div>
         <div className="footer-links"><strong>Navegação</strong><a href="#sobre">Sobre o atendimento</a><a href="#atendimentos">Áreas de acolhimento</a><a href="#processo">Como funciona</a><a href="#localizacao">Localização</a><a href="#faq">Dúvidas</a></div>
         <div className="footer-contact"><strong>Agendamentos</strong><a href={whatsapp} target="_blank" rel="noreferrer">{phoneLabel}</a><a className="footer-cta" href={whatsapp} target="_blank" rel="noreferrer">Fale pelo WhatsApp <ArrowUpRight size={15} /></a><p>Quadra 574, Lote 5A<br />Novo Gama – GO · CEP 72860-537</p></div>
         <div className="footer-bottom">© {new Date().getFullYear()} Maria de Jesus Costa · Atendimento terapêutico</div>
