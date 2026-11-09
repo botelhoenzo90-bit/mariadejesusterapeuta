@@ -187,6 +187,33 @@ function Index() {
         <BookingButton>Agende uma conversa</BookingButton>
       </section>
 
+      <section className="reviews section" aria-labelledby="reviews-title">
+        <div className="section-heading center">
+          <div className="kicker">Relatos ilustrativos</div>
+          <h2 id="reviews-title">Acolhimento, escuta e <em>respeito à sua história.</em></h2>
+          <p>Veja exemplos fictícios de como pode ser descrita uma experiência de atendimento. Estes textos são apenas modelos de apresentação, não são avaliações reais de clientes.</p>
+        </div>
+        <div className="reviews-marquee" aria-label="Carrossel de exemplos fictícios de relatos">
+          <div className="reviews-track">
+            {[
+              ["Ana Paula", "Gostei da proposta de um atendimento com escuta atenta e respeito às minhas vivências. Um espaço para conversar com tranquilidade."],
+              ["Carla Mendes", "A abordagem acolhedora e o respeito às minhas crenças são pontos importantes para me sentir à vontade durante uma conversa."],
+              ["João Ribeiro", "Ter um momento para organizar os pensamentos, falar sobre desafios e refletir com calma faz diferença na minha rotina."]
+            ].concat([
+              ["Ana Paula", "Gostei da proposta de um atendimento com escuta atenta e respeito às minhas vivências. Um espaço para conversar com tranquilidade."],
+              ["Carla Mendes", "A abordagem acolhedora e o respeito às minhas crenças são pontos importantes para me sentir à vontade durante uma conversa."],
+              ["João Ribeiro", "Ter um momento para organizar os pensamentos, falar sobre desafios e refletir com calma faz diferença na minha rotina."]
+            ]).map(([name, quote], i) => <article className="google-card testimonial-placeholder" key={i}>
+              <div className="testimonial-stars" aria-label="Estrelas decorativas">{[1,2,3,4,5].map((star) => <Star key={star} size={18} fill="currentColor" />)}</div>
+              <p className="testimonial-copy">“{quote}”</p>
+              <div className="testimonial-profile"><span className="avatar"><Heart size={20} /></span><div><strong>{name}</strong><small>Personagem fictícia · exemplo</small></div></div>
+              <span className="demo-label">RELATO FICTÍCIO · NÃO É AVALIAÇÃO REAL</span>
+            </article>)}
+          </div>
+        </div>
+        <BookingButton>Converse com Maria</BookingButton>
+      </section>
+
       <section id="processo" className="process section">
         <div className="process-shell">
           <div className="section-heading center">
@@ -236,24 +263,7 @@ function Index() {
         </div>
       </section>
 
-      <section className="reviews section" aria-labelledby="reviews-title">
-        <div className="section-heading center">
-          <div className="kicker">Depoimentos</div>
-          <h2 id="reviews-title">Um espaço reservado para <em>histórias reais.</em></h2>
-          <p>Os relatos serão publicados com autorização de cada pessoa. Em breve, esta área poderá reunir experiências de quem desejar compartilhar sua jornada.</p>
-        </div>
-        <div className="reviews-marquee" aria-label="Modelos de cards para futuros depoimentos">
-          <div className="reviews-track">
-            {[1,2,3,1,2,3].map((item, i) => <article className="google-card testimonial-placeholder" key={i}>
-              <div className="testimonial-stars" aria-label="Estrelas ilustrativas de demonstração">{[1,2,3,4,5].map((star) => <Star key={star} size={17} />)}</div>
-              <p className="testimonial-copy">Espaço reservado para inserir o depoimento verdadeiro de uma pessoa atendida, mediante autorização.</p>
-              <div className="testimonial-profile"><span className="avatar"><Heart size={20} /></span><div><strong>Nome do cliente</strong><small>Depoimento demonstrativo</small></div></div>
-              <span className="demo-label">MODELO · SUBSTITUIR POR RELATO REAL</span>
-            </article>)}
-          </div>
-        </div>
-        <BookingButton>Converse com Maria</BookingButton>
-      </section>
+
 
       <section id="faq" className="faq section">
         <div className="section-heading center"><div className="kicker">Dúvidas frequentes</div><h2>Antes de começar, <em>tire suas dúvidas.</em></h2><p>Se sua pergunta não estiver aqui, fale diretamente pelo WhatsApp.</p><BookingButton>Tirar uma dúvida</BookingButton></div>
