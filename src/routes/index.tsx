@@ -4,6 +4,8 @@ import { ArrowRight, ArrowUpRight, Check, ChevronDown, Heart, Sparkles, Star, Ma
 import anaFeitosaAsset from "@/assets/ana-feitosa.png.asset.json";
 import atendimentoOnlineAsset from "@/assets/atendimento-online.png.asset.json";
 import anaNaturopataAsset from "@/assets/ana-naturopata.png.asset.json";
+const areaImgs = import.meta.glob("@/assets/area-acolhimento-*.jpg.asset.json", { eager: true, import: "default" }) as Record<string, { url: string }>;
+const areaUrl = (n: number) => Object.entries(areaImgs).find(([k]) => k.endsWith(`-${n}.jpg.asset.json`))?.[1].url;
 import whatsappAsset from "@/assets/whatsapp.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -132,7 +134,7 @@ function Index() {
         <div className="services-marquee">
           <div className="services-track">
             {[...services, ...services].map(([title, desc], i) => <article className="service-card" key={i}>
-              <div className="card-number">{String((i % services.length) + 1).padStart(2, "0")}</div><div className="service-icon"><Sparkles size={25} /></div><h3>{title}</h3><p>{desc}</p>
+              <img className="service-photo" src={areaUrl((i % services.length) + 1)} alt={title} loading="lazy" /><h3>{title}</h3><p>{desc}</p>
             </article>)}
           </div>
         </div>
