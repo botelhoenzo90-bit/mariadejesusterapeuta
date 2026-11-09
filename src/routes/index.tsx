@@ -146,7 +146,7 @@ function Index() {
         <div className="section-copy">
           <div className="kicker">Conheça seu atendimento</div>
           <h2>Uma escuta com respeito à sua história e à sua <em>individualidade.</em></h2>
-          <div className="about-image-wrap about-image-mobile" style={{ display: "grid", placeItems: "center", background: "#eadbc8", color: "var(--brown-dark)", padding: 24 }}>
+          <div className="about-image-wrap about-image-mobile" style={{ placeItems: "center", background: "#eadbc8", color: "var(--brown-dark)", padding: 24 }}>
             <div style={{ textAlign: "center" }}><HandHeart size={58} strokeWidth={1.2} /><p style={{ fontFamily: "Georgia,serif", fontSize: 23 }}>Acolher também é cuidar.</p></div>
           </div>
           <p>Maria de Jesus Costa oferece atendimento terapêutico com abordagem ministerial, fundamentado em escuta, acolhimento e respeito às vivências de cada pessoa.</p>
@@ -210,7 +210,7 @@ function Index() {
         <div className="online-copy section-copy">
           <div className="kicker">Atendimento online</div>
           <h2>Um espaço de conversa onde <em>você estiver.</em></h2>
-          <div className="online-image-wrap online-image-mobile" style={{ display: "grid", placeItems: "center", background: "#eadbc8", color: "var(--brown-dark)" }}><Video size={76} strokeWidth={1.2} /></div>
+          <div className="online-image-wrap online-image-mobile" style={{ placeItems: "center", background: "#eadbc8", color: "var(--brown-dark)" }}><Video size={76} strokeWidth={1.2} /></div>
           <p>O atendimento online oferece praticidade para quem prefere conversar de casa ou de outro local reservado. Consulte pelo WhatsApp os horários e as orientações para a sessão.</p>
           <div className="online-points"><span><Check /> Praticidade</span><span><Check /> Horário combinado</span><span><Check /> Ambiente reservado</span></div>
           <BookingButton>Consultar horários online</BookingButton>
