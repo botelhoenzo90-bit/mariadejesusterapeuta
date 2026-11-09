@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
-import { ArrowRight, ArrowUpRight, Check, ChevronDown, Heart, Sparkles, Star, MapPin, Video, BookOpen, HandHeart, MessageCircle } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Check, ChevronDown, Heart, Sparkles, Star, MapPin, Video, BookOpen, HandHeart, MessageCircle, UserRound } from "lucide-react";
 import anaFeitosaAsset from "@/assets/ana-feitosa.png.asset.json";
 import atendimentoOnlineAsset from "@/assets/atendimento-online.png.asset.json";
 import anaNaturopataAsset from "@/assets/ana-naturopata.png.asset.json";
@@ -206,7 +206,7 @@ function Index() {
             ]).map(([name, quote], i) => <article className="google-card testimonial-placeholder" key={i}>
               <div className="testimonial-stars" aria-label="Estrelas decorativas">{[1,2,3,4,5].map((star) => <Star key={star} size={18} fill="currentColor" />)}</div>
               <p className="testimonial-copy">“{quote}”</p>
-              <div className="testimonial-profile"><span className="avatar"><Heart size={20} /></span><div><strong>{name}</strong><small>Personagem fictícia · exemplo</small></div></div>
+              <div className="testimonial-profile"><span className="avatar"><UserRound size={25} strokeWidth={1.7} /></span><div><strong>{name}</strong><small>Personagem fictícia · exemplo</small></div></div>
               <span className="demo-label">RELATO FICTÍCIO · NÃO É AVALIAÇÃO REAL</span>
             </article>)}
           </div>
