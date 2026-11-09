@@ -216,3 +216,34 @@ footer{grid-template-columns:1.4fr 1fr 1fr;gap:36px}
 /* Testimonial cards: faster continuous movement, including on hover */
 .reviews-track{animation-duration:24s}
 .reviews-marquee:hover .reviews-track,.reviews-marquee:focus-within .reviews-track{animation-play-state:running}
+
+
+/* Proporção uniforme e responsiva dos cards de depoimentos */
+.google-card.testimonial-placeholder{
+  width:340px;
+  min-width:340px;
+  height:300px;
+  min-height:300px;
+  padding:24px 24px 22px;
+  border-radius:24px;
+  overflow:hidden;
+}
+.testimonial-stars{margin-bottom:17px}
+.testimonial-copy{
+  width:100%;
+  max-width:100%;
+  font-size:16px;
+  line-height:1.6;
+  margin-bottom:18px;
+}
+.testimonial-profile{flex:none;margin-top:auto}
+@media(max-width:620px){
+  .google-card.testimonial-placeholder{
+    width:min(82vw,310px);
+    min-width:min(82vw,310px);
+    height:290px;
+    min-height:290px;
+    padding:22px 20px 20px;
+  }
+  .testimonial-copy{font-size:15px;line-height:1.55}
+}
