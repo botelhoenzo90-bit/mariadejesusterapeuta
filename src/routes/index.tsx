@@ -189,7 +189,7 @@ function Index() {
 
       <section className="reviews section" aria-labelledby="reviews-title">
         <div className="section-heading center">
-          <div className="kicker">Relatos ilustrativos</div>
+          
           <h2 id="reviews-title">Acolhimento, escuta e <em>respeito à sua história.</em></h2>
           <p>Um atendimento conduzido com escuta atenta, acolhimento e respeito à sua história, considerando suas necessidades e o seu momento de vida.</p>
         </div>
