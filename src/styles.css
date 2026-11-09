@@ -18,3 +18,112 @@ footer{background:#2f1b12;color:#eadfd4;padding:65px clamp(20px,8vw,120px) 25px;
 .floating-whatsapp{position:fixed;right:20px;bottom:20px;z-index:60;border-radius:50%;width:62px;height:62px;display:block;overflow:hidden;box-shadow:0 14px 35px rgba(77,43,25,.3);transition:.25s}.floating-whatsapp img{width:100%;height:100%;display:block;object-fit:cover;border-radius:50%}.floating-whatsapp:hover{transform:translateY(-3px) scale(1.03)}
 @media(max-width:900px){.about,.online{grid-template-columns:1fr}.about{max-width:none;text-align:center}.about .section-copy{max-width:900px;margin:auto}.about .section-copy>p{margin-left:auto}.about .check-list{margin:22px auto}.about-image-desktop,.online-image-desktop{display:none}.about-image-mobile{display:block;width:min(100%,560px);margin:26px auto}.online{text-align:center}.online-copy{max-width:900px;margin:auto}.online-copy>p{margin-left:auto}.online-image-mobile{display:block;width:min(100%,700px);margin:26px auto}.online-points{justify-content:center}.welcome-grid{grid-template-columns:repeat(2,1fr)}.moments-grid{grid-template-columns:repeat(2,1fr)}.process-timeline{grid-template-columns:repeat(2,1fr)}.google-grid{max-width:650px}.google-card{width:320px}.site footer{grid-template-columns:1fr 1fr}.footer-bottom{grid-column:1/-1}}
 @media(max-width:620px){.pain-solution-grid{grid-template-columns:1fr;gap:12px;margin-top:26px}.pain-column,.solution-column{padding:24px 20px;border-radius:24px}.pain-item strong{font-size:17px}.solution-column h3{font-size:25px}.solution-points{gap:7px;margin:17px 0 21px}.solution-points span{font-size:12px;padding:8px 9px}.pain-solution .section-heading h2{font-size:34px}.pain-solution .section-heading p{font-size:12px}.hero-clean{min-height:460px;padding:38px 20px 44px}.hero-logo{width:100%;margin-bottom:14px}.eyebrow{font-size:9px;letter-spacing:.13em;margin-bottom:16px}.hero-content>p{font-size:17px;line-height:1.7}.hero-content .btn{width:100%}.trust-row{gap:10px}.section{padding:42px 20px}.section-heading{margin-bottom:24px}.section-heading h2,.section-copy h2{font-size:39px}.welcome-grid,.moments-grid{grid-template-columns:1fr}.soft-pill{min-height:76px}.about-image-wrap{margin:22px auto;aspect-ratio:3/4}.check-list{grid-template-columns:1fr}.service-card{width:285px;min-height:250px;padding:24px 22px}.steps{grid-template-columns:1fr}.faq-item button{font-size:16px}.floating-whatsapp{right:16px;bottom:16px;width:56px;height:56px}footer{grid-template-columns:1fr!important}.process-timeline{grid-template-columns:1fr}}
+
+
+/* Layout refinements for the adapted single-page site */
+:root{--leaf:var(--brown);--leaf-soft:#f0e3d2}
+img{max-width:100%}
+.site section{min-width:0}
+.section{padding-top:clamp(48px,6vw,82px);padding-bottom:clamp(48px,6vw,82px)}
+.section-heading{width:100%}
+.section-heading h2,.section-copy h2{overflow-wrap:normal;text-wrap:balance}
+.section-heading p,.section-copy>p{max-width:700px}
+.hero-clean{padding:clamp(48px,7vw,88px) 22px;min-height:520px}
+.hero-content{width:min(100%,880px)}
+.hero-logo{max-width:620px}
+.welcome-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.soft-pill{padding:18px 16px;line-height:1.35;text-align:center}
+.pain-simple-grid{align-items:stretch}
+.pain-simple-card{height:100%}
+.services{padding-left:0;padding-right:0}
+.services>.section-heading{padding-left:22px;padding-right:22px}
+.services-cta{padding-left:20px;padding-right:20px}
+.service-card{height:auto;min-height:300px}
+.about{grid-template-columns:minmax(260px,440px) minmax(0,650px);gap:clamp(30px,5vw,72px)}
+.about-image-wrap{background:#eadbc8;box-shadow:0 14px 36px rgba(63,36,23,.12)}
+.about-image-wrap img{object-position:center center}
+.about .section-copy>p{max-width:650px}
+.naturopathy{--leaf:var(--brown);--leaf-soft:#eadbc8}
+.naturopathy-inner{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.naturopathy-image{background:#eadbc8;box-shadow:0 14px 36px rgba(63,36,23,.12)}
+.naturopathy-copy .kicker,.naturopathy-copy h2 em{color:var(--brown)}
+.naturopathy-copy .btn{background:var(--brown)}
+.online{grid-template-columns:minmax(0,650px) minmax(300px,520px)}
+.online-image-wrap{background:#eadbc8;box-shadow:0 14px 36px rgba(63,36,23,.12)}
+.moments-grid{align-items:stretch}
+.moment-card{height:100%}
+.process{background:#6b3d20}
+.process .kicker{color:#e3c7aa}
+.process h2{color:#fffaf2}
+.process h2 em{color:#e1bd98}
+.process .section-heading p{color:#ead8c6}
+.process-card{min-height:230px}
+.reviews{padding-left:0;padding-right:0}
+.reviews>.section-heading,.reviews>.btn{margin-left:auto;margin-right:auto}
+.reviews>.section-heading{padding-left:22px;padding-right:22px}
+.reviews>.btn{display:table}
+.google-card{min-height:190px}
+.google-card p{line-height:1.65}
+.faq-list{margin-top:36px}
+.faq .section-heading>.btn{margin-top:20px}
+.final-cta{padding:clamp(58px,7vw,88px) 22px}
+footer{grid-template-columns:1.4fr 1fr 1fr;gap:36px}
+.footer-contact p{font-size:12px;line-height:1.7;color:#bfa995}
+.floating-whatsapp img{object-fit:cover}
+@media(max-width:900px){
+  .about,.online{grid-template-columns:minmax(0,1fr);gap:28px}
+  .about{padding-left:24px;padding-right:24px}
+  .about-image-desktop,.online-image-desktop{display:none}
+  .about-image-mobile,.online-image-mobile{display:block;width:min(100%,560px);margin:24px auto}
+  .about-image-wrap{aspect-ratio:4/5;max-height:620px}
+  .online-image-wrap{aspect-ratio:16/10}
+  .about .section-copy,.online-copy{width:100%;max-width:760px;margin:0 auto}
+  .about .section-copy>p,.online-copy>p{margin-left:auto;margin-right:auto}
+  .about .check-list{margin-left:auto;margin-right:auto}
+  .online{text-align:center}
+  .online-points{justify-content:center}
+  .naturopathy-inner{grid-template-columns:minmax(0,1fr);gap:30px}
+  .naturopathy-image{width:min(100%,680px);margin:0 auto;aspect-ratio:16/10}
+  .naturopathy-copy{width:100%;max-width:760px;margin:0 auto}
+  .welcome-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .moments-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .process-timeline{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:620px){
+  .section{padding:44px 18px}
+  .hero-clean{min-height:auto;padding:52px 20px}
+  h1{font-size:clamp(43px,12vw,60px);line-height:1}
+  .hero-content>p{font-size:16px;line-height:1.65}
+  .trust-row{gap:10px 16px;font-size:12px}
+  .section-heading h2,.section-copy h2{font-size:clamp(34px,9vw,43px);line-height:1.06}
+  .section-heading p,.section-copy>p{font-size:16px;line-height:1.65}
+  .welcome-grid,.moments-grid{grid-template-columns:1fr}
+  .soft-pill{min-height:72px;flex-direction:row;justify-content:flex-start;text-align:left;border-radius:18px;padding:16px 20px}
+  .pain-simple-grid{grid-template-columns:1fr;gap:14px}
+  .pain-simple-card{padding:22px 20px}
+  .services{padding-left:0;padding-right:0}
+  .services>.section-heading{padding-left:18px;padding-right:18px}
+  .service-card{width:min(82vw,300px);min-height:265px;border-radius:26px;padding:25px 22px}
+  .service-card h3{font-size:26px}
+  .about{padding-left:18px;padding-right:18px}
+  .about-image-wrap{aspect-ratio:4/5}
+  .check-list{grid-template-columns:1fr}
+  .clean-checks span{justify-content:flex-start}
+  .naturopathy-image{aspect-ratio:4/3}
+  .naturopathy-copy h2{font-size:36px}
+  .process-timeline{grid-template-columns:1fr;gap:12px}
+  .process-card{min-height:0;padding:22px 20px}
+  .process-card h3{margin:14px 0 8px}
+  .online{padding-left:18px;padding-right:18px}
+  .online-image-wrap{aspect-ratio:4/3}
+  .reviews{padding-left:0;padding-right:0}
+  .google-card{width:min(82vw,320px);min-height:190px}
+  .faq-list{margin-top:28px}
+  .faq-item button{gap:14px;padding:20px 2px;font-size:15px}
+  .faq-item.open .answer p{padding:0 8px 20px 2px;font-size:14px}
+  .final-cta h2{font-size:clamp(36px,10vw,48px)}
+  .final-cta p{font-size:16px}
+  footer{grid-template-columns:1fr!important;gap:30px;padding:48px 22px 24px}
+  .footer-bottom{grid-column:1}
+  .floating-whatsapp{right:16px;bottom:16px;width:58px;height:58px}
+}
