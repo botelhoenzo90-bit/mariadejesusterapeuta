@@ -197,3 +197,17 @@ footer{grid-template-columns:1.4fr 1fr 1fr;gap:36px}
  .reviews{padding-top:38px;padding-bottom:44px}
  .reviews .section-heading{margin-bottom:14px}
 }
+
+
+/* Profile placeholder aligned beside the fictional name */
+.testimonial-profile{width:100%;flex-direction:row;align-items:center;justify-content:center;gap:12px;margin-top:auto;text-align:left}
+.testimonial-profile .avatar{width:52px;height:52px;min-width:52px;display:grid;place-items:center;border:1.5px solid #cbb49b;border-radius:50%;background:#f5eee5;color:#8a684a}
+.testimonial-profile>div{text-align:left}
+.testimonial-profile strong,.testimonial-profile small{display:block;text-align:left}
+.testimonial-profile strong{font-size:15px}
+.testimonial-profile small{font-size:11px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;white-space:nowrap;min-height:54px;padding:15px 28px;font-size:16px;line-height:1.15;font-weight:700;max-width:100%;width:max-content}
+@media(max-width:620px){
+ .btn{font-size:15px;min-height:54px;padding:15px 22px;gap:9px;white-space:nowrap;width:auto;max-width:calc(100vw - 36px)}
+ .testimonial-profile{justify-content:center}
+}
