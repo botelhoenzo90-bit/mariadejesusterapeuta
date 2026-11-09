@@ -191,7 +191,7 @@ function Index() {
         <div className="section-heading center">
           <div className="kicker">Relatos ilustrativos</div>
           <h2 id="reviews-title">Acolhimento, escuta e <em>respeito à sua história.</em></h2>
-          <p>Veja exemplos fictícios de como pode ser descrita uma experiência de atendimento. Estes textos são apenas modelos de apresentação, não são avaliações reais de clientes.</p>
+          <p>Um atendimento conduzido com escuta atenta, acolhimento e respeito à sua história, considerando suas necessidades e o seu momento de vida.</p>
         </div>
         <div className="reviews-marquee" aria-label="Carrossel de exemplos fictícios de relatos">
           <div className="reviews-track">
